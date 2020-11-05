@@ -1,0 +1,22 @@
+html {
+    background-color: gray;
+}
+.top-bar {
+    background-color: rgb(62, 65, 185);
+    color: beige;
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    line-height: 50px;
+    position: absolute;
+    padding: 1px 10px;
+}
+.top-bar ul {
+    padding: 0px;
+}
+.top-bar li {
+    list-style: none;
+    margin: 0px;
+    display: inline;
+}
