@@ -4,28 +4,26 @@ html {
 .top-bar {
     background-color: rgb(62, 65, 185);
     color: beige;
-    display: table;
     height: 50px;
     width: 100%;
-    left: 0px;
-    top: 0px;
-    line-height: 50px;
+    top: 0;
+    left: 0;
     position: fixed;
     padding: 5px 5px;
+    white-space: nowrap;
 
 }
 
-.image {
-    margin: 0px;
-    padding: 0px;
-    display: table-cell;
+.v-align-helper {
+    display: inline-block;
+    height: 100%;
     vertical-align: middle;
 }
 
-.image img {
-    margin: 0px;
-    height: 45px;
-    width: 45px;
+img {
+    max-height: 40px;
+    max-width: 40px;
+    margin: 5px;
     vertical-align: middle;
 }
 
