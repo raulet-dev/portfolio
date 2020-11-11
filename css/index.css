@@ -1,30 +1,49 @@
 html {
     background-color: gray;
 }
-.top-bar {
-    background-color: rgb(62, 65, 185);
-    color: beige;
-    height: 50px;
-    width: 100%;
-    top: 0;
-    left: 0;
+
+.top-bar-grid{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px;
+    background-color: cornflowerblue;
     position: fixed;
-    padding: 5px 5px;
-    white-space: nowrap;
-
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    align-items: center;
 }
 
-.v-align-helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+.mi-foto {
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    width: 70px;
 }
 
-img {
-    max-height: 40px;
-    max-width: 40px;
-    margin: 5px;
-    vertical-align: middle;
+.mi-foto img {
+    height: 60px;
+    width: 60px;
+    margin: 4px;
+    border: 1px solid black;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.mi-foto img:hover {
+    height: 200px;
+    width: 200px;
+    margin: 4px;
+    position: absolute;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.top-menu {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: auto;
 }
 
 .content {
