@@ -14,6 +14,7 @@ html {
     align-items: center;
 }
 
+/* portrait effects */
 .mi-foto {
     margin: 0px;
     padding: 0px;
@@ -30,20 +31,46 @@ html {
     transition: 0.5s;
 }
 
-.mi-foto img:hover {
+.mi-foto:hover img {
     height: 200px;
     width: 200px;
     margin: 4px;
-    position: absolute;
-    border: 1px solid black;
     transition: 0.5s;
 }
+.fold-menu {
+    width: 0px;
+    height: 0px;
+    display: none;
+    list-style: none;
+    padding: 0px;
+}
+
+.fold-menu li {
+    border: 1px solid black;
+    margin-top: -1px;
+    margin-left: 4px;
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    transition: 1s;
+}
+
+.fold-menu li:hover {
+    background-color: blueviolet;
+}
+
+.mi-foto:hover .fold-menu {
+    margin-top: 206px;
+    display: block;
+    transition: 1s;
+}
+/* end portrait effects */
 
 .top-menu {
     margin: 0px;
     padding: 0px;
-    height: auto;
-    width: auto;
+    height: 60px;
+    width: 100%;
 }
 
 .content {
