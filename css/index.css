@@ -73,7 +73,7 @@ html {
     box-shadow: black 0px 0px 3px inset;
     transition: 0.5s;
 }
-
+ 
 .mi-foto:hover .fold-menu {
     margin-top: 206px;
     visibility: visible;
