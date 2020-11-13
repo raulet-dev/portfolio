@@ -22,29 +22,32 @@ html {
 }
 
 /* start top bar */
-.top-bar-grid{
+.top-bar-grid {
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 70px 1fr 70px;
     grid-template-rows: 70px;
     background-color: #557A95;
     position: fixed;
-    left: 0px;
-    top: 0px;
-    right: 0px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
     align-items: center;
-    border-bottom: 1px solid #5D5C61;
-    box-shadow: #5D5C61 0px 3px 5px;
+    border: 1px solid #5D5C61;
+    box-shadow: #5D5C61 1px 3px 5px;
+    border-radius: 35px;
+    min-width: 600px;
 }
 
 /* start portrait effects */
-.mi-foto {
+
+.top-left {
     margin: 0px;
     padding: 0px;
     height: 70px;
     width: 70px;
 }
 
-.mi-foto img.portrait {
+.top-left img.portrait {
     height: 60px;
     width: 60px;
     margin: 4px;
@@ -54,7 +57,7 @@ html {
     transition: 0.5s;
 }
 
-.mi-foto:hover img.portrait {
+.top-left:hover img.portrait {
     height: 200px;
     width: 200px;
     margin: 4px;
@@ -62,6 +65,8 @@ html {
     box-shadow: #5D5C61 1px 2px 5px;
     border-radius: 0px;
     border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 35px;
 }
 .fold-menu {
     margin-top: 0px;
@@ -105,7 +110,7 @@ html {
     border: none;
 }
  
-.mi-foto:hover .fold-menu {
+.top-left:hover .fold-menu {
     margin-top: 206px;
     visibility: visible;
     transition: 0.5s;
@@ -131,7 +136,7 @@ html {
     line-height: 70px;
     display: inline-block;
     font-size: 32px;
-    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     color: #f5f5dc;
 
@@ -150,5 +155,44 @@ html {
 /* end top bar */
 
 .content {
-    margin-top: 80px;
+    background-color: #878683;
+    background-image: url('../img/landscape.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 35px;
+    position: fixed;
+    top: 85px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    padding: 35px 35px;
+    border: 1px solid #5D5C61;
+    box-shadow: #5D5C61 1px 3px 5px;
+    min-width: 600px;
+    min-height: 600px;
+    z-index: -1;
+}
+
+.quote-box {
+    font-size: 45px;
+    color: white;
+    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(93, 92, 97, 0.7));
+    border-radius: 35px;
+    padding: 15px 50px;
+    border: 1px solid rgba(93, 92, 97, 0.4);
+    box-shadow: rgba(93, 92, 97, 0.3) 1px 3px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.quote-text {
+    font-style: italic;
+    text-align: left;
+}
+
+.quote-signature {
+    text-align: right;
 }
