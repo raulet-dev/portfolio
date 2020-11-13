@@ -1,22 +1,42 @@
+/* Start Palette */
+/*
+/* Backgrounds:
+/* #5D5C61 Dark Gray
+/* #878683 Mild Gray
+/* #B1A296 Light Gray
+/* #557A95 Dark Blue
+/* #7395AE Light Blue
+/*
+/* Font:
+/* #f5f5dc Beige
+/*
+/* border and shadow:
+/* black // inset shadow
+/* #5D5C61 Dark Gray
+/*
+/* End Palette */
+
+
 html {
-    background-color: gray;
+    background-color: #B1A296;
 }
 
+/* start top bar */
 .top-bar-grid{
     display: grid;
     grid-template-columns: 70px 1fr;
     grid-template-rows: 70px;
-    background-color: cornflowerblue;
+    background-color: #557A95;
     position: fixed;
     left: 0px;
     top: 0px;
     right: 0px;
     align-items: center;
-    border-bottom: 1px solid black;
-    box-shadow: black 0px 3px 5px;
+    border-bottom: 1px solid #5D5C61;
+    box-shadow: #5D5C61 0px 3px 5px;
 }
 
-/* portrait effects */
+/* start portrait effects */
 .mi-foto {
     margin: 0px;
     padding: 0px;
@@ -24,22 +44,22 @@ html {
     width: 70px;
 }
 
-.mi-foto img {
+.mi-foto img.portrait {
     height: 60px;
     width: 60px;
     margin: 4px;
-    border: 1px solid black;
+    border: 1px solid #5D5C61;
     border-radius: 30px;
     position: absolute;
     transition: 0.5s;
 }
 
-.mi-foto:hover img {
+.mi-foto:hover img.portrait {
     height: 200px;
     width: 200px;
     margin: 4px;
     transition: 0.5s;
-    box-shadow: black 1px 2px 5px;
+    box-shadow: #5D5C61 1px 2px 5px;
     border-radius: 0px;
     border-bottom-right-radius: 100px;
 }
@@ -52,26 +72,37 @@ html {
     padding: 0px;
 }
 
-.fold-menu li {
+.fold-menu div {
     position: relative;
-    border: 1px solid black;
+    border: 1px solid #5D5C61;
     margin-top: -1px;
     margin-left: 4px;
     width: 60px;
     height: 60px;
-    background-color: brown;
-    box-shadow: black 1px 2px 5px;
+    background-color: #557A95;
+    box-shadow: #5D5C61 1px 2px 5px;
 }
 
-.fold-menu-last {
+.fold-menu-option.last {
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
-.fold-menu li:hover {
-    background-color: blueviolet;
+.fold-menu div:hover {
+    background-color: #7395AE;
     box-shadow: black 0px 0px 3px inset;
     transition: 0.5s;
+    cursor: pointer;
+}
+
+.fold-menu-option img.linkedin,
+.fold-menu-option img.github,
+.fold-menu-option img.mail,
+.fold-menu-option img.pdf{
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border: none;
 }
  
 .mi-foto:hover .fold-menu {
@@ -82,12 +113,41 @@ html {
 }
 /* end portrait effects */
 
-.top-menu {
+/* start sections menu */
+.top-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0px;
     padding: 0px;
-    height: 60px;
+    height: 70px;
     width: 100%;
+    text-align: center;
+    overflow: hidden;
 }
+
+.top-section {
+    padding: 0px 20px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    font-size: 32px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #f5f5dc;
+
+}
+
+.top-section:hover {
+    cursor: pointer;
+    background-color: #7395AE;
+    box-shadow: black 1px 1px 3px inset;
+    text-shadow: #557A95 1px 1px 2px;
+    transition: 0.3s;
+}
+
+/* end sections menu */
+
+/* end top bar */
 
 .content {
     margin-top: 80px;
