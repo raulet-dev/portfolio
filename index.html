@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Raul Paya, Portfolio</title>
         <link rel="stylesheet" href="./css/index.css" type="text/css"/>
+        <script src="./js/main.js"></script>
     </head>
     <body>
+        <div class="load" id="load"><div>Loading, please wait...</div></div> <!-- load screen -->
         <div class="top-bar-grid">
             <div class="top-left"><img class="portrait" src="./img/portrait-med.png"/>
                 <div class="fold-menu">
-                    <div class="fold-menu-option"><img class="linkedin" src="./img/linkedin-ico-120.png" /></div>
-                    <div class="fold-menu-option"><img class="github" src="./img/github-ico-120.png" /></div>
-                    <div class="fold-menu-option"><img class="mail" src="./img/mail-ico-120.png" /></div>
-                    <div class="fold-menu-option last"><img class="pdf" src="./img/pdf-ico-120.png" /></div>
+                    <div class="fold-menu-option"><a href="https://www.linkedin.com/in/ra%C3%BAl-pay%C3%A1-morales-106a5813/" target="_blank"><img class="linkedin" src="./img/linkedin-ico-120.png" /></a></div>
+                    <div class="fold-menu-option"><a href="https://github.com/raulet-dev" target="_blank"><img class="github" src="./img/github-ico-120.png" /></a></div>
+                    <div class="fold-menu-option"><a href="mailto:contact@raulet.dev" target="_blank"><img class="mail" src="./img/mail-ico-120.png" /></a></div>
+                    <div class="fold-menu-option last"><a href="./dwn/resume.pdf" target="_blank"><img class="pdf" src="./img/pdf-ico-120.png" /></a></div>
                 </div>
             </div>
             <div class="top-middle">
-                <div class="top-section home">Home</div>
-                <div class="top-section about">About me</div>
-                <div class="top-section work">Work</div>
-                <div class="top-section contact">Contact</div>
+                <div class="top-section" id="top-home"><a href="#home">Home</a></div>
+                <div class="top-section" id="top-about"><a href="#about">About me</a></div>
+                <div class="top-section" id="top-work"><a href="#work">Work</a></div>
+                <div class="top-section" id="top-contact"><a href="#contact">Contact</a></div>
             </div>
             <div class="power-button">
                 <input type="checkbox" id="power-on-off" class="power-on-off-check" checked="true"/>  
@@ -27,13 +30,30 @@
 
             </div>
         </div>
-        <div class="content"> <!-- content -->
+        <div class="content" id="home"> <!-- home content -->
             <div class="quote-box">
                 <p class="quote-text" id="quote-text"></p>
                 <p class="quote-signature" id="quote-signature"></p>
-
             </div>
-        </div> <!-- End of content --> 
+        </div> <!-- End of home content --> 
+
+        <div class="content" id="about"> <!-- about content -->
+            <div>
+                <p>about</p>
+            </div>
+        </div> <!-- End of about content --> 
+
+        <div class="content" id="work"> <!-- work content -->
+            <div>
+                <p>work</p>
+            </div>
+        </div> <!-- End of work content --> 
+
+        <div class="content" id="contact"> <!-- contact content -->
+            <div>
+                <p>contact</p>
+            </div>
+        </div> <!-- End of contact content --> 
     </body>
-    <script src="./js/main.js"></script>
+    
 </html>

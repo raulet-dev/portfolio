@@ -22,4 +22,6 @@ function getRndInteger(min, max) {
 
 const rnd = getRndInteger(0, quotes.length);
 
-return quotes[rnd];
+export function getQuote() {
+    return this.quotes[this.rnd];
+}

@@ -1,3 +1,30 @@
+$(document).ready(function(){
+
+//hide not active content
+$('.content#about').fadeOut();
+$('.content#work').fadeOut();
+$('.content#contact').fadeOut();
+
+// switch contents
+$('#top-home').click(function(){
+    $('.content').fadeOut(500); // Hide all content divs
+    $('.content#home').fadeIn(500); // Show the requested part
+});
+$('#top-about').click(function(){
+    $('.content').fadeOut(500); // Hide all content divs
+    $('.content#about').fadeIn(500); // Show the requested part
+});
+$('#top-work').click(function(){
+    $('.content').fadeOut(500); // Hide all content divs
+    $('.content#work').fadeIn(500); // Show the requested part 
+});
+$('#top-contact').click(function(){
+    $('.content').fadeOut(500); // Hide all content divs
+    $('.content#contact').fadeIn(500); // Show the requested part
+});
+// end switch contents
+
+
 /////////////////////////////////////////////////////////
 // move to a different file //
 
@@ -29,6 +56,10 @@ const quotes = [
 ////////////////////////////////////////////////////////////////
 
 
-
+// quote assign
 document.getElementById("quote-text").innerHTML = quote[0];
 document.getElementById("quote-signature").innerHTML = quote[1];
+
+// load screen fade off
+$('#load').fadeOut(1500);
+});
