@@ -22,6 +22,11 @@
 html {
     background-color: #B1A296;
 }
+
+body {
+    font-size: 24px;
+}
+
 body, html {
     overflow: hidden;
 }
