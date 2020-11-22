@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
 //hide not active content
-$('.content#home').fadeOut(); // about ... put home for develop purpouse
-$('.content#work').fadeOut();
+$('.content#about').fadeOut(); 
+$('.content#work').fadeOut(); // work ... put home for develop purpouse
 $('.content#contact').fadeOut();
 
 const quotes = [
