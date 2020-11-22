@@ -1,32 +1,9 @@
 $(document).ready(function(){
 
 //hide not active content
-$('.content#about').fadeOut();
+$('.content#home').fadeOut(); // about ... put home for develop purpouse
 $('.content#work').fadeOut();
 $('.content#contact').fadeOut();
-
-// switch contents
-$('#top-home').click(function(){
-    $('.content').fadeOut(500); // Hide all content divs
-    $('.content#home').fadeIn(500); // Show the requested part
-});
-$('#top-about').click(function(){
-    $('.content').fadeOut(500); // Hide all content divs
-    $('.content#about').fadeIn(500); // Show the requested part
-});
-$('#top-work').click(function(){
-    $('.content').fadeOut(500); // Hide all content divs
-    $('.content#work').fadeIn(500); // Show the requested part 
-});
-$('#top-contact').click(function(){
-    $('.content').fadeOut(500); // Hide all content divs
-    $('.content#contact').fadeIn(500); // Show the requested part
-});
-// end switch contents
-
-
-/////////////////////////////////////////////////////////
-// move to a different file //
 
 const quotes = [
     ['\"Like my friend Warren Buffett, I feel particularly lucky to do something every day that I love to do. He calls it \'tap-dancing to work.\'\"', '- Bill Gates.'],
@@ -46,19 +23,43 @@ const quotes = [
     ['\"The Linux philosophy is \'Laugh in the face of danger\'. Oops. Wrong One. \'Do it yourself\'. Yes, that\'s it.\"', '- Linus Torvalds.']
     ];
     
-    function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    
-    const rnd = getRndInteger(0, quotes.length);
-    const quote = quotes[rnd];
+const getRndInteger = (min, max) => (Math.floor(Math.random() * (max - min)) + min);
 
-////////////////////////////////////////////////////////////////
+// get display status of an element
+const getContentDisplay = (elem) => (getComputedStyle(document.querySelector(elem)).display);
 
-
-// quote assign
-document.getElementById("quote-text").innerHTML = quote[0];
-document.getElementById("quote-signature").innerHTML = quote[1];
+// switch contents
+$('#top-home').click(function(){
+    if (getContentDisplay('.content#home') === 'none'){
+        $('.content').fadeOut(500);
+        const rnd = getRndInteger(0, quotes.length);
+        const quote = quotes[rnd];
+        document.getElementById("quote-text").innerHTML = quote[0];
+        document.getElementById("quote-signature").innerHTML = quote[1];
+        $('.content#home').fadeIn(500);
+    };
+});
+$('#top-about').click(function(){
+    if (getContentDisplay('.content#about') === 'none'){
+        $('.content').fadeOut(500);
+        $('.content#about').fadeIn(500);
+    };
+});
+$('#top-work').click(function(){
+    console.log(getContentDisplay('.content#work'))
+    if (getContentDisplay('.content#work') === 'none'){
+        $('.content').fadeOut(500);
+        $('.content#work').fadeIn(500);
+    };
+});
+$('#top-contact').click(function(){
+    console.log(getContentDisplay('.content#contact'))
+    if (getContentDisplay('.content#contact') === 'none'){
+        $('.content').fadeOut(500);
+        $('.content#contact').fadeIn(500);
+    };
+});
+// end switch contents
 
 // load screen fade off
 $('#load').fadeOut(1500);
