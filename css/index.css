@@ -25,6 +25,9 @@ html {
 
 body {
     font-size: 24px;
+    font-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
 body, html {
@@ -376,13 +379,11 @@ body, html {
     margin-left: 15px;
     color: beige;
     font-size: 24px;
-    line-height: 24px;
 }
 
 .content#about h1{
     color: #ffb87e;
     font-size: 36px;
-    line-height: 36px;
     text-decoration: underline;
     text-align: center;
 }
@@ -391,14 +392,12 @@ body, html {
     margin-left: -15px;
     color: #ffdd7e;
     font-size: 28px;
-    line-height: 28px;
 }
 
 .content#about #detail-language{
     margin-left: -15px;
     color: #ffdd7e;
     font-size: 26px;
-    line-height: 26px;
 }
 
 .about-portrait {
