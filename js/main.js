@@ -25,6 +25,11 @@ const quotes = [
     
 const getRndInteger = (min, max) => (Math.floor(Math.random() * (max - min)) + min);
 
+const rnd = getRndInteger(0, quotes.length);
+const quote = quotes[rnd];
+document.getElementById("quote-text").innerHTML = quote[0];
+document.getElementById("quote-signature").innerHTML = quote[1];
+
 // get display status of an element
 const getContentDisplay = (elem) => (getComputedStyle(document.querySelector(elem)).display);
 
