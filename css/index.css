@@ -208,15 +208,21 @@ body, html {
 .power-button {
     width: 70px;
     height: 70px;
+    display: inline-block;
+}
+
+.power-on-off-check {
+    visibility: hidden;
+    position: relative;
+    display: none;
 }
 
 .power-on-off-check ~ .power-on-off-switch {
     position: relative;
     display: inline-block;
-    top: -20px;
+    margin: 4px 5px 6px 5px;
     width: 60px;
     height: 60px;
-    margin: 4px;
     background-image: url('../img/power-off.png');
     background-position: center -1px -1px;
     background-size: cover;
@@ -239,17 +245,8 @@ body, html {
 }
 
 .power-on-off-check:checked ~ .power-on-off-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    margin: 4px;
-    background-image: url('../img/power-on.png');
-    background-position: center -1px -1px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('../img/power-on.png'); 
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .power-on-off-check:checked ~ .black-screen {
@@ -257,9 +254,7 @@ body, html {
     visibility: hidden;
 }
 
-.power-on-off-check {
-    visibility: hidden;
-}
+
 
 /* end power button effects */
 
@@ -425,7 +420,9 @@ body, html {
 /* start content work */
 
 .content#work {
-    background-color: blue;
+    background:radial-gradient(#557A95 ,#5D5C61);
+    overflow: auto;
+    top: 85px;
 }
 
 /* end content work */
@@ -433,7 +430,25 @@ body, html {
 /* start content contact */
 
 .content#contact {
-    background-color: green;
+    background:radial-gradient(#557A95 ,#5D5C61);
+    overflow: auto;
+    top: 85px;
+}
+
+.contact-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 1fr;
+    border: solid 2px;
+    border-image: linear-gradient( 90deg, rgb(0, 0, 0,0), rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0)) 1;
+}
+
+.contact-form {
+    
+}
+
+.contact-form #Send{
+    display: block;
 }
 
 /* end content contact */

@@ -27,7 +27,6 @@
                 <input type="checkbox" id="power-on-off" class="power-on-off-check" checked="true"/>  
                 <div class="black-screen"></div>
                 <label for="power-on-off" class="power-on-off-switch"></label>
-
             </div>
         </div>
         <div class="content" id="home"> <!-- home content -->
@@ -104,8 +103,22 @@
         </div> <!-- End of work content --> 
 
         <div class="content" id="contact"> <!-- contact content -->
-            <div>
-                <p>contact</p>
+            <div class="contact-grid">
+                <div></div>   <!-- left margin -->
+                <div class="contact-form">
+                    <label>Subject:</label>
+                    <input type="text" id="subject">
+                    <label>Message:</label>
+                    <textarea id="body" cols="30" rows="10"></textarea>
+                    <button id="send" onclick="sendMail();">Send</button>
+                    <label id="send-error"></label>
+                </div>
+                <div>
+                    <div><img src="./img/linkedin-ico-120.png" alt=""></div>
+                    <div><img src="./img/github-ico-120.png" alt=""></div>
+                    <div><img src="./img/pdf-ico-120.png" alt=""></div>
+                </div>
+                <div></div>   <!-- right margin -->
             </div>
         </div> <!-- End of contact content --> 
     </body>
