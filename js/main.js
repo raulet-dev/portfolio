@@ -3,7 +3,7 @@ $(document).ready(function(){
 //hide not active content
 $('.content#about').fadeOut(); // about ... put home for develop purpouse
 $('.content#work').fadeOut(); // work ... put home for develop purpouse
-$('.content#home').fadeOut(); // contact ... put home for develop purpouse
+$('.content#contact').fadeOut(); // contact ... put home for develop purpouse
 
 const quotes = [
     ['\"Like my friend Warren Buffett, I feel particularly lucky to do something every day that I love to do. He calls it \'tap-dancing to work.\'\"', '- Bill Gates.'],

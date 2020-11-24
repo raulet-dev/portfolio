@@ -434,20 +434,43 @@ body, html {
 }
 
 .contact-grid {
+    top: 50%;
+    transform: translateY(-50%);
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-columns: 1fr 600px 1fr;
     border: solid 2px;
     border-image: linear-gradient( 90deg, rgb(0, 0, 0,0), rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0)) 1;
 }
 
-.contact-form {
-    
+.contact-icon {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 40px;
 }
 
-.contact-form #Send{
+.contact-icon:hover {
+    background: radial-gradient(rgb(255, 184, 126,1), rgb(115, 149, 174, 0),rgb(115, 149, 174, 0));
+}
+
+.contact-quote {
     display: block;
 }
+
+.contact-quote p{
+    font-size: 36px;
+    line-height: 50px;
+    color: #ffb87e;
+    text-align: center;
+}
+
+.contact-quote span{
+    font-size: 36px;
+    line-height: 50px;
+    color: #ffdd7e;
+    text-align: center;
+}
+
 
 /* end content contact */
 
