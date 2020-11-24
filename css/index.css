@@ -451,6 +451,7 @@ body, html {
 
 .contact-icon:hover {
     background: radial-gradient(rgb(255, 184, 126,1), rgb(115, 149, 174, 0),rgb(115, 149, 174, 0));
+    transition: 0.5s;
 }
 
 .contact-quote {
