@@ -66,6 +66,8 @@ $('#top-contact').click(function(){
 });
 // end switch contents
 
+/*
+
 // send mail function
 var mandrill = require('node-mandrill')('<your API Key>'); 
 
@@ -97,6 +99,8 @@ app.post( '/api/sendemail/', function(req, res){
     sendEmail ( _name, _email, _subject, _message );
 
 });
+
+*/
 
 // load screen fade off
 $('#load').fadeOut(1500);

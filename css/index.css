@@ -102,6 +102,7 @@ body, html {
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
     border-top-left-radius: 35px;
+    z-index: +4;
 }
 .fold-menu {
     margin-top: 0px;
@@ -373,7 +374,8 @@ body, html {
 .content#about p{
     margin-left: 15px;
     color: beige;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 .content#about h1{
@@ -383,16 +385,12 @@ body, html {
     text-align: center;
 }
 
-.content#about #detail-title{
+.content#about #detail-title,
+.content#about #detail-language
+{
     margin-left: -15px;
     color: #ffdd7e;
-    font-size: 28px;
-}
-
-.content#about #detail-language{
-    margin-left: -15px;
-    color: #ffdd7e;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .about-portrait {
